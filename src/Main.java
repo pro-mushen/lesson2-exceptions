@@ -21,7 +21,12 @@ public class Main {
             System.out.println("Был указан " + e.getNumber());
         }
 
-        System.out.println (mathBox.factorialStack(100000000));
+        try {
+            System.out.println(mathBox.factorialStack(100000000));
+        } catch (StackOverflowError e) {
+            System.out.println("Всё плохо StackOverflowError");
+        }
+
 
     }
 
